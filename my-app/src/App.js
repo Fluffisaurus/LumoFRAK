@@ -1,5 +1,5 @@
 import React from 'react'
-import { InstantSearch, Configure, Hits, SearchBox, Highlight, RefinementList, Pagination, CurrentRefinements, ClearRefinements } from 'react-instantsearch-dom';
+import { InstantSearch, Configure, Hits, SearchBox, Highlight, Pagination } from 'react-instantsearch-dom';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { createStore } from 'redux';
 import './App.css';
