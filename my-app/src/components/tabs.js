@@ -5,6 +5,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 
+import PaperSheet from './papers.js';
+
 const styles = theme => ({
     root: {
       flexGrow: 1,
@@ -87,7 +89,8 @@ const styles = theme => ({
               label="Tab 3"
             />
           </Tabs>
-          <Typography className={classes.typography}>Ant Design UI powered by Material-UI</Typography>
+
+          <PaperSheet style={{overflow: 'auto'}}/>
         </div>
       );
     }
