@@ -118,7 +118,7 @@ const Depression = () => (
           <Link to="/PTSD"><h3>PTSD</h3></Link>
         </div>
         <div id="tab2">
-        <Link to="/Depression"><h1 style={styles}>Depression</h1></Link>
+          <Link to="/Depression"><h3>Depression</h3></Link>
         </div>
         <div id="tab3">
           <Link to="/Substance"><h3>Substance Abuse</h3></Link>
@@ -127,21 +127,13 @@ const Depression = () => (
           <Link to="/Suicide"><h3>Suicide</h3></Link>
         </div>
       </div >
-      <div className="col-sm-9">
-      <div className="row ">
-          <div id="top1" class="col-sm-3 col-md-3 col-lg-3">
-            <h2>News</h2>
-          </div>
-          <div id="top2" class="col-sm-3 col-md-3 col-lg-3">
-            <h2>General</h2>
-          </div>
-          <div id="top3" class="col-sm-3 col-md-3 col-lg-3">
-            <h2>Locations</h2>
-          </div>
-          <div id="top4" class="col-sm-3 col-md-3 col-lg-3">
-            <h2>Services</h2>
-          </div>
-        </div>
+      <div class="col-8 pt-2">
+        <ul class="list-inline">
+          <li class="active list-inline-item col-3"><a href="#">Videos</a></li>
+          <li class="list-inline-item col-3"><a href="#">General</a></li>
+          <li class="list-inline-item col-3"><a href="#">Locations</a></li>
+          <li class="list-inline-item col-2"><a href="#">Services</a></li>
+        </ul>
         <div id="content">
           <Videos />
         </div>
@@ -161,27 +153,19 @@ const Substance = () => (
           <Link to="/Depression"><h3>Depression</h3></Link>
         </div>
         <div id="tab3">
-        <Link to="/Substance"><h1 style={styles}>Substance Abuse</h1></Link>
+          <Link to="/Substance"><h3>Substance Abuse</h3></Link>
         </div>
         <div id="tab4">
           <Link to="/Suicide"><h3>Suicide</h3></Link>
         </div>
       </div >
-      <div className="col-sm-9">
-      <div className="row ">
-          <div id="top1" class="col-sm-3 col-md-3 col-lg-3">
-            <h2>News</h2>
-          </div>
-          <div id="top2" class="col-sm-3 col-md-3 col-lg-3">
-            <h2>General</h2>
-          </div>
-          <div id="top3" class="col-sm-3 col-md-3 col-lg-3">
-            <h2>Locations</h2>
-          </div>
-          <div id="top4" class="col-sm-3 col-md-3 col-lg-3">
-            <h2>Services</h2>
-          </div>
-        </div>
+      <div class="col-8 pt-2">
+        <ul class="list-inline">
+          <li class="active list-inline-item col-3"><a href="#">Videos</a></li>
+          <li class="list-inline-item col-3"><a href="#">General</a></li>
+          <li class="list-inline-item col-3"><a href="#">Locations</a></li>
+          <li class="list-inline-item col-2"><a href="#">Services</a></li>
+        </ul>
         <div id="content">
           <Videos />
         </div>
@@ -204,24 +188,16 @@ const Suicide = () => (
           <Link to="/Substance"><h3>Substance Abuse</h3></Link>
         </div>
         <div id="tab4">
-        <Link to="/Suicide"><h1 style={styles}>Suicide</h1></Link>
+          <Link to="/Suicide"><h3>Suicide</h3></Link>
         </div>
       </div >
-      <div className="col-sm-9">
-      <div className="row ">
-          <div id="top1" class="col-sm-3 col-md-3 col-lg-3">
-            <h2>News</h2>
-          </div>
-          <div id="top2" class="col-sm-3 col-md-3 col-lg-3">
-            <h2>General</h2>
-          </div>
-          <div id="top3" class="col-sm-3 col-md-3 col-lg-3">
-            <h2>Locations</h2>
-          </div>
-          <div id="top4" class="col-sm-3 col-md-3 col-lg-3">
-            <h2>Services</h2>
-          </div>
-        </div>
+      <div class="col-8 pt-2">
+        <ul class="list-inline">
+          <li class="active list-inline-item col-3"><a href="#">Videos</a></li>
+          <li class="list-inline-item col-3"><a href="#">General</a></li>
+          <li class="list-inline-item col-3"><a href="#">Locations</a></li>
+          <li class="list-inline-item col-2"><a href="#">Services</a></li>
+        </ul>
         <div id="content">
           <Videos />
         </div>
