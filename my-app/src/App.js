@@ -4,6 +4,12 @@ import './App.css';
 import News from './algolia.js';
 import CenteredGrid from './components/main.js';
 
+import { withStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import CustomizedTabs from './components/tabs.js'; 
+import PaperSheet from './components/papers.js';
+import PermanentDrawer from './components/drawer.js';
+
 class LandingPage extends React.Component {
   constructor() {
     super();
@@ -34,7 +40,19 @@ class LandingPage extends React.Component {
 
 
 const PTSD = () => (
-  <CenteredGrid item='PTSD'/>
+  <div>
+      <Grid container spacing={0}>
+        <Grid item xs={2}>
+            <div>
+                <PermanentDrawer item = {'PTSD'}/>
+            </div>
+        </Grid>
+        <Grid item xs={10}>
+            <CustomizedTabs item = {'PTSD'}/>
+            <PaperSheet item = {'PTSD'}/>
+        </Grid>
+      </Grid>
+    </div>
 )
 
 const Depression = () => (
