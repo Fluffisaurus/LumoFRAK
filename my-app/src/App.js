@@ -35,15 +35,7 @@ class LandingPage extends React.Component {
 
 
 const PTSD = () => (
-  <div>
-    <h2>PTSD</h2>
-    <div>
-      <h3>hi</h3>
-    </div>
-    <div>
-
-    </div>
-  </div>
+  <CenteredGrid />
 )
 
 const Depression = () => (
@@ -71,20 +63,11 @@ const Credits = () => (
 )
 
 const App = () => (
+  
 
-  <Router>
+   <Router>
     <div>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/PTSD">PTSD</Link></li>
-        <li><Link to="/Depression">Depression</Link></li>
-        <li><Link to="/Substance">Substance Abuse</Link></li>
-        <li><Link to="/Suicide">Suicide</Link></li>
-      </ul>
-
-      <hr/>
-
-      <InstantSearch
+       <InstantSearch
         appId="QQ4OC1OUOJ"
         apiKey="189583dc48a145bd10e8eb851f568d4d"
         indexName="tedtalksvideos"
