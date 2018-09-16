@@ -8,14 +8,14 @@
 }
 
 #Blue:hover{
-  fill:#2fa9dd;;
+  fill:#2fa9dd;
 }
 
 #Green:hover{
-  fill:#00a651;;
+  fill:#00a651;
 }
 #Purple:hover{
-  fill:#662d91;;
+  fill:#662d91;
 }
 
 #svgDiv{
@@ -27,4 +27,18 @@
 
 #title{
 text-align: center
+}
+
+#buttonColoured{
+  display: block;
+  background-color: red;
+}
+
+#buttonNoColour{
+  display: block;
+  background-color: grey;
+}
+
+tabColumns{
+  flex-direction: column;
 }
