@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import './App.css';
-import News from './algolia.js';
+import Videos from './algolia.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -35,16 +35,16 @@ class LandingPage extends React.Component {
 
 let track = 1;
 
-class PTSD extends React.Component {
+class PTSD2 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      contab: 'News'
+      contab: 'Videos'
     }
   }
   checkStuff() {
     switch (this.props.state) {
-      case 'News':
+      case 'Videos':
         track = 1;
         break;
       case 'General':
@@ -83,35 +83,27 @@ const PTSD = () => (
     <div class="row pl-3">
       <div class="col-sm-3 pt-5">
         <div id="tab1">
-          <Link to="/PTSD"> <h2>PTSD</h2> </Link>
+          <Link to="/PTSD"><h3>PTSD</h3></Link>
         </div>
         <div id="tab2">
-          <Link to="/Depression"><h2>Depression</h2></Link>
+          <Link to="/Depression"><h3>Depression</h3></Link>
         </div>
         <div id="tab3">
-          <Link to="/Substance"><h2>Substance Abuse</h2></Link>
+          <Link to="/Substance"><h3>Substance Abuse</h3></Link>
         </div>
         <div id="tab4">
-          <Link to="/Suicide"><h2>Suicide</h2></Link>
+          <Link to="/Suicide"><h3>Suicide</h3></Link>
         </div>
       </div >
-      <div className="col-sm-9">
-        <div className="row ">
-          <div id="top1" class="col-sm-3 col-md-3 col-lg-3">
-            <h2>News</h2>
-          </div>
-          <div id="top2" class="col-sm-3 col-md-3 col-lg-3">
-            <h2>General</h2>
-          </div>
-          <div id="top3" class="col-sm-3 col-md-3 col-lg-3">
-            <h2>Locations</h2>
-          </div>
-          <div id="top4" class="col-sm-3 col-md-3 col-lg-3">
-            <h2>Services</h2>
-          </div>
-        </div>
+      <div class="col-8 pt-2">
+        <ul class="list-inline">
+          <li class="active list-inline-item col-3"><a href="#">Videos</a></li>
+          <li class="list-inline-item col-3"><a href="#">General</a></li>
+          <li class="list-inline-item col-3"><a href="#">Locations</a></li>
+          <li class="list-inline-item col-2"><a href="#">Services</a></li>
+        </ul>
         <div id="content">
-          <News />
+          <Videos />
         </div>
       </div>
     </div>
@@ -119,39 +111,31 @@ const PTSD = () => (
 )
 
 const Depression = () => (
-  <div>
-    <div className="row">
-      <div className="col-3 pt-5">
+  <div class="container-fluid">
+    <div class="row pl-3">
+      <div class="col-sm-3 pt-5">
         <div id="tab1">
-          <Link to="/PTSD"> <h1>PTSD</h1> </Link>
+          <Link to="/PTSD"><h3>PTSD</h3></Link>
         </div>
         <div id="tab2">
-          <Link to="/Depression"><h1>Depression</h1></Link>
+          <Link to="/Depression"><h3>Depression</h3></Link>
         </div>
         <div id="tab3">
-          <Link to="/Substance"><h1>Substance Abuse</h1></Link>
+          <Link to="/Substance"><h3>Substance Abuse</h3></Link>
         </div>
         <div id="tab4">
-          <Link to="/Suicide"><h1>Suicide</h1></Link>
+          <Link to="/Suicide"><h3>Suicide</h3></Link>
         </div>
       </div >
-      <div className="col-9">
-        <div className="row">
-          <div id="top1">
-            <h1>News</h1>
-          </div>
-          <div id="top2">
-            <h1>General</h1>
-          </div>
-          <div id="top3">
-            <h1>Locations</h1>
-          </div>
-          <div id="top4">
-            <h1>Services</h1>
-          </div>
-        </div>
+      <div class="col-8 pt-2">
+        <ul class="list-inline">
+          <li class="active list-inline-item col-3"><a href="#">Videos</a></li>
+          <li class="list-inline-item col-3"><a href="#">General</a></li>
+          <li class="list-inline-item col-3"><a href="#">Locations</a></li>
+          <li class="list-inline-item col-2"><a href="#">Services</a></li>
+        </ul>
         <div id="content">
-          <News />
+          <Videos />
         </div>
       </div>
     </div>
@@ -159,39 +143,31 @@ const Depression = () => (
 )
 
 const Substance = () => (
-  <div>
-    <div className="row">
-      <div className="col-3 pt-5">
+  <div class="container-fluid">
+    <div class="row pl-3">
+      <div class="col-sm-3 pt-5">
         <div id="tab1">
-          <Link to="/PTSD"> <h1>PTSD</h1> </Link>
+          <Link to="/PTSD"><h3>PTSD</h3></Link>
         </div>
         <div id="tab2">
-          <Link to="/Depression"><h1>Depression</h1></Link>
+          <Link to="/Depression"><h3>Depression</h3></Link>
         </div>
         <div id="tab3">
-          <Link to="/Substance"><h1>Substance Abuse</h1></Link>
+          <Link to="/Substance"><h3>Substance Abuse</h3></Link>
         </div>
         <div id="tab4">
-          <Link to="/Suicide"><h1>Suicide</h1></Link>
+          <Link to="/Suicide"><h3>Suicide</h3></Link>
         </div>
       </div >
-      <div className="col-9">
-        <div className="row">
-          <div id="top1">
-            <h1>News</h1>
-          </div>
-          <div id="top2">
-            <h1>General</h1>
-          </div>
-          <div id="top3">
-            <h1>Locations</h1>
-          </div>
-          <div id="top4">
-            <h1>Services</h1>
-          </div>
-        </div>
+      <div class="col-8 pt-2">
+        <ul class="list-inline">
+          <li class="active list-inline-item col-3"><a href="#">Videos</a></li>
+          <li class="list-inline-item col-3"><a href="#">General</a></li>
+          <li class="list-inline-item col-3"><a href="#">Locations</a></li>
+          <li class="list-inline-item col-2"><a href="#">Services</a></li>
+        </ul>
         <div id="content">
-          <News />
+          <Videos />
         </div>
       </div>
     </div>
@@ -199,39 +175,31 @@ const Substance = () => (
 )
 
 const Suicide = () => (
-  <div>
-    <div className="row">
-      <div className="col-3 pt-5">
+  <div class="container-fluid">
+    <div class="row pl-3">
+      <div class="col-sm-3 pt-5">
         <div id="tab1">
-          <Link to="/PTSD"> <h1>PTSD</h1> </Link>
+          <Link to="/PTSD"><h3>PTSD</h3></Link>
         </div>
         <div id="tab2">
-          <Link to="/Depression"><h1>Depression</h1></Link>
+          <Link to="/Depression"><h3>Depression</h3></Link>
         </div>
         <div id="tab3">
-          <Link to="/Substance"><h1>Substance Abuse</h1></Link>
+          <Link to="/Substance"><h3>Substance Abuse</h3></Link>
         </div>
         <div id="tab4">
-          <Link to="/Suicide"><h1>Suicide</h1></Link>
+          <Link to="/Suicide"><h3>Suicide</h3></Link>
         </div>
       </div >
-      <div className="col-9">
-        <div className="row">
-          <div id="top1">
-            <h1>News</h1>
-          </div>
-          <div id="top2">
-            <h1>General</h1>
-          </div>
-          <div id="top3">
-            <h1>Locations</h1>
-          </div>
-          <div id="top4">
-            <h1>Services</h1>
-          </div>
-        </div>
+      <div class="col-8 pt-2">
+        <ul class="list-inline">
+          <li class="active list-inline-item col-3"><a href="#">Videos</a></li>
+          <li class="list-inline-item col-3"><a href="#">General</a></li>
+          <li class="list-inline-item col-3"><a href="#">Locations</a></li>
+          <li class="list-inline-item col-2"><a href="#">Services</a></li>
+        </ul>
         <div id="content">
-          <News />
+          <Videos />
         </div>
       </div>
     </div>

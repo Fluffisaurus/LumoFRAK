@@ -10,7 +10,7 @@ const App = () => (
   >
     {/* Search widgets will go there */}
     <SearchBox />
-    <Configure hitsPerPage={20} />
+    <Configure hitsPerPage={16} />
     <Hits hitComponent={Product} />
     <Pagination />
   </InstantSearch>
