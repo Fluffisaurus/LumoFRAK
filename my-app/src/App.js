@@ -6,17 +6,21 @@ import './App.css';
 
 var tab = 1;
 const tabs = ['PTSD', 'Depression', 'Substance', 'Suicide'];
-const currentState = 0;
+const currentStateArray = [];
 
 const changeTab = (text) => {
   return {type: 'CHANGE_TAB', text}
 }
 
-const currentTabReducer = (state = currentState, action) =>{
+function changeTabStuff(state, action){
+  return [...state, action];
+}
+
+const currentTabReducer = (state = currentStateArray, action) =>{
   switch(action.type){
     case 'CHANGE_TAB':
       console.log("i am here");
-      return action.text;
+      return changeTabStuff(state, action.text);
     default:
       return state;
   }
@@ -177,7 +181,7 @@ const App = () => (
         <Pagination />
       </InstantSearch>
 
-      <Route exact path="/" component={Home}/>
+      <Route exact path="/" component={MainContent}/>
       <Route path="/PTSD" component={PTSD}/>
       <Route path="/Depression" component={Depression}/>
       <Route path="/Substance" component={Substance}/>
