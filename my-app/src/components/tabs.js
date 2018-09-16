@@ -67,7 +67,7 @@ const styles = theme => ({
       const { value } = this.state;
   
       return (
-        <div className={classes.root}>
+        <div className={classes.root} style={{overflow: 'auto'}}>
           <Tabs
             value={value}
             onChange={this.handleChange}
@@ -90,7 +90,7 @@ const styles = theme => ({
             />
           </Tabs>
 
-          <PaperSheet style={{overflow: 'auto'}}/>
+          <PaperSheet />
         </div>
       );
     }
