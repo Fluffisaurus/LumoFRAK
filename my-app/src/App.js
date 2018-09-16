@@ -35,39 +35,40 @@ class LandingPage extends React.Component {
 
 
 const PTSD = () => (
-  <div className="row pl-3">
-    <div className="col-3 pt-5">
-      <div id="tab1">
-      <Link to="/PTSD"> <h2>PTSD</h2> </Link>
-      </div>
-      <div id="tab2">
-      <Link to="/Depression"><h2>Depression</h2></Link>
-      </div>
-      <div id="tab3">
-      <Link to="/Substance"><h2>Substance Abuse</h2></Link>
-      </div>
-      <div id="tab4">
-      <Link to="/Suicide"><h2>Suicide</h2></Link>
-      </div>
-    </div >
-    <div className="col-9">
-      <div className="row ">
-        <div id="top1" class="col-sm-3 col-md-3 col-lg-3">
-          <h2>News</h2>
+  <div class="container-fluid">
+    <div class="row pl-3">
+      <div class="col-sm-3 pt-5">
+        <div id="tab1">
+        <Link to="/PTSD"> <h2>PTSD</h2> </Link>
         </div>
-        <div id="top2" class="col-sm-3 col-md-3 col-lg-3">
-          <h2>General</h2>
+        <div id="tab2">
+        <Link to="/Depression"><h2>Depression</h2></Link>
         </div>
-        <div id="top3" class="col-sm-3 col-md-3 col-lg-3">
-          <h2>Locations</h2>
+        <div id="tab3">
+        <Link to="/Substance"><h2>Substance Abuse</h2></Link>
         </div>
-        <div id="top4" class="col-sm-3 col-md-3 col-lg-3">
-          <h2>Services</h2>
+        <div id="tab4">
+        <Link to="/Suicide"><h2>Suicide</h2></Link>
         </div>
-      </div>
-      <div id="content">
-      <News />
-
+      </div >
+      <div className="col-sm-9">
+        <div className="row ">
+          <div id="top1" class="col-sm-3 col-md-3 col-lg-3">
+            <h2>News</h2>
+          </div>
+          <div id="top2" class="col-sm-3 col-md-3 col-lg-3">
+            <h2>General</h2>
+          </div>
+          <div id="top3" class="col-sm-3 col-md-3 col-lg-3">
+            <h2>Locations</h2>
+          </div>
+          <div id="top4" class="col-sm-3 col-md-3 col-lg-3">
+            <h2>Services</h2>
+          </div>
+        </div>
+        <div id="content">
+        <News />
+        </div>
       </div>
     </div>
   </div>
