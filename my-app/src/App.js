@@ -3,6 +3,7 @@ import { InstantSearch, Configure, Hits, SearchBox, Highlight, RefinementList, P
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { createStore } from 'redux';
 import './App.css';
+import CenteredGrid from './components/main.js';
 
 class LandingPage extends React.Component {
   constructor() {
@@ -70,6 +71,7 @@ const Credits = () => (
 )
 
 const App = () => (
+
   <Router>
     <div>
       <ul>
@@ -104,6 +106,7 @@ const App = () => (
 
     </div>
   </Router>
+
 )
 
 function Product({ hit }) {
