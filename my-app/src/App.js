@@ -33,22 +33,26 @@ class LandingPage extends React.Component {
   }
 }
 
+let styles = {
+  color:'red',
+  backgroundColor: 'yellow',
+};
 
 const PTSD = () => (
   <div class="container-fluid">
     <div class="row pl-3">
       <div class="col-sm-3 pt-5">
         <div id="tab1">
-        <Link to="/PTSD"> <h2>PTSD</h2> </Link>
+        <Link to="/PTSD"> <h1 style={styles} >PTSD</h1> </Link>
         </div>
         <div id="tab2">
-        <Link to="/Depression"><h2>Depression</h2></Link>
+        <Link to="/Depression"><h1>Depression</h1></Link>
         </div>
         <div id="tab3">
-        <Link to="/Substance"><h2>Substance Abuse</h2></Link>
+        <Link to="/Substance"><h1>Substance Abuse</h1></Link>
         </div>
         <div id="tab4">
-        <Link to="/Suicide"><h2>Suicide</h2></Link>
+        <Link to="/Suicide"><h1>Suicide</h1></Link>
         </div>
       </div >
       <div className="col-sm-9">
@@ -82,7 +86,7 @@ const Depression = () => (
         <Link to="/PTSD"> <h1>PTSD</h1> </Link>
         </div>
         <div id="tab2">
-        <Link to="/Depression"><h1>Depression</h1></Link>
+        <Link to="/Depression"><h1 style={styles}>Depression</h1></Link>
         </div>
         <div id="tab3">
         <Link to="/Substance"><h1>Substance Abuse</h1></Link>
@@ -91,19 +95,19 @@ const Depression = () => (
         <Link to="/Suicide"><h1>Suicide</h1></Link>
         </div>
       </div >
-      <div className="col-9">
-        <div className="row">
-          <div id="top1">
-            <h1>News</h1>
+      <div className="col-sm-9">
+      <div className="row ">
+          <div id="top1" class="col-sm-3 col-md-3 col-lg-3">
+            <h2>News</h2>
           </div>
-          <div id="top2">
-            <h1>General</h1>
+          <div id="top2" class="col-sm-3 col-md-3 col-lg-3">
+            <h2>General</h2>
           </div>
-          <div id="top3">
-            <h1>Locations</h1>
+          <div id="top3" class="col-sm-3 col-md-3 col-lg-3">
+            <h2>Locations</h2>
           </div>
-          <div id="top4">
-            <h1>Services</h1>
+          <div id="top4" class="col-sm-3 col-md-3 col-lg-3">
+            <h2>Services</h2>
           </div>
         </div>
         <div id="content">
@@ -125,25 +129,25 @@ const Substance = () => (
         <Link to="/Depression"><h1>Depression</h1></Link>
         </div>
         <div id="tab3">
-        <Link to="/Substance"><h1>Substance Abuse</h1></Link>
+        <Link to="/Substance"><h1 style={styles}>Substance Abuse</h1></Link>
         </div>
         <div id="tab4">
         <Link to="/Suicide"><h1>Suicide</h1></Link>
         </div>
       </div >
-      <div className="col-9">
-        <div className="row">
-          <div id="top1">
-            <h1>News</h1>
+      <div className="col-sm-9">
+      <div className="row ">
+          <div id="top1" class="col-sm-3 col-md-3 col-lg-3">
+            <h2>News</h2>
           </div>
-          <div id="top2">
-            <h1>General</h1>
+          <div id="top2" class="col-sm-3 col-md-3 col-lg-3">
+            <h2>General</h2>
           </div>
-          <div id="top3">
-            <h1>Locations</h1>
+          <div id="top3" class="col-sm-3 col-md-3 col-lg-3">
+            <h2>Locations</h2>
           </div>
-          <div id="top4">
-            <h1>Services</h1>
+          <div id="top4" class="col-sm-3 col-md-3 col-lg-3">
+            <h2>Services</h2>
           </div>
         </div>
         <div id="content">
@@ -168,22 +172,22 @@ const Suicide = () => (
         <Link to="/Substance"><h1>Substance Abuse</h1></Link>
         </div>
         <div id="tab4">
-        <Link to="/Suicide"><h1>Suicide</h1></Link>
+        <Link to="/Suicide"><h1 style={styles}>Suicide</h1></Link>
         </div>
       </div >
-      <div className="col-9">
-        <div className="row">
-          <div id="top1">
-            <h1>News</h1>
+      <div className="col-sm-9">
+      <div className="row ">
+          <div id="top1" class="col-sm-3 col-md-3 col-lg-3">
+            <h2>News</h2>
           </div>
-          <div id="top2">
-            <h1>General</h1>
+          <div id="top2" class="col-sm-3 col-md-3 col-lg-3">
+            <h2>General</h2>
           </div>
-          <div id="top3">
-            <h1>Locations</h1>
+          <div id="top3" class="col-sm-3 col-md-3 col-lg-3">
+            <h2>Locations</h2>
           </div>
-          <div id="top4">
-            <h1>Services</h1>
+          <div id="top4" class="col-sm-3 col-md-3 col-lg-3">
+            <h2>Services</h2>
           </div>
         </div>
         <div id="content">
