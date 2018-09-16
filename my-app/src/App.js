@@ -1,9 +1,5 @@
 import React from 'react'
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
 const Home = () => (
   <div>
@@ -11,61 +7,50 @@ const Home = () => (
   </div>
 )
 
-const About = () => (
+const PTSD = () => (
   <div>
-    <h2>About</h2>
+    <h2>PTSD</h2>
   </div>
 )
 
-const Topic = ({ match }) => (
+const Depression = () => (
   <div>
-    <h3>{match.params.topicId}</h3>
+    <h2>Depression</h2>
   </div>
 )
 
-const Topics = ({ match }) => (
+const Substance = () => (
   <div>
-    <h2>Topics</h2>
-    <ul>
-      <li>
-        <Link to={`${match.url}/rendering`}>
-          Rendering with React
-        </Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/components`}>
-          Components
-        </Link>
-      </li>
-      <li>
-        <Link to={`${match.url}/props-v-state`}>
-          Props v. State
-        </Link>
-      </li>
-    </ul>
-
-    <Route path={`${match.path}/:topicId`} component={Topic}/>
-    <Route exact path={match.path} render={() => (
-      <h3>Please select a topic.</h3>
-    )}/>
+    <h2>Substance Abuse</h2>
   </div>
 )
 
-const BasicExample = () => (
+const Suicide = () => (
+  <div>
+    <h2>Suicide</h2>
+  </div>
+)
+
+const App = () => (
   <Router>
     <div>
       <ul>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/topics">Topics</Link></li>
+        <li><Link to="/PTSD">PTSD</Link></li>
+        <li><Link to="/Depression">Depression</Link></li>
+        <li><Link to="/Substance">Substance Abuse</Link></li>
+        <li><Link to="/Suicide">Suicide</Link></li>
       </ul>
 
       <hr/>
 
       <Route exact path="/" component={Home}/>
-      <Route path="/about" component={About}/>
-      <Route path="/topics" component={Topics}/>
+      <Route path="/PTSD" component={PTSD}/>
+      <Route path="/Depression" component={Depression}/>
+      <Route path="/Substance" component={Substance}/>
+      <Route path="/Suicide" component={Suicide}/>
+
     </div>
   </Router>
 )
-export default BasicExample;
+export default App;
