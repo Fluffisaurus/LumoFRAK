@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
-import Modal from './modal.js';
+import SimpleModal from './modal.js';
 
 const styles = theme => ({
     root: {
@@ -35,7 +35,7 @@ class PaperSheet extends React.Component {
                     <Typography component="p">
                         Paper can be used to build surface or other elements for your application.
                     </Typography>
-                    <Modal />
+                    <SimpleModal />
                 </Paper>
             </div>
         );

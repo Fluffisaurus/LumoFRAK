@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import './App.css';
-import CustomizedTabs from './components/tabs.js';
+import CenteredGrid from './components/main.js';
 
 var what = "hello!"
 
@@ -66,7 +66,7 @@ const Credits = () => (
 
 const App = () => (
 
-  <CustomizedTabs />
+  <CenteredGrid />
   // <Router>
   //   <div>
   //     <Route exact path="/" component={Home} />

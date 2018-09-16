@@ -16,9 +16,9 @@ const styles = theme => ({
   modal: {
     position: 'fixed',
     marginTop: theme.spacing.unit * 10,
-    marginLeft: theme.spacing.unit * 10,
-    marginRight: theme.spacing.unit * 10,
-    width: theme.spacing.unit * 151,
+    marginLeft: theme.spacing.unit * 35,
+    marginRight: theme.spacing.unit * 40,
+    width: theme.spacing.unit * 130,
     maxHeight: theme.spacing.unit * 75,
     overflow: 'auto'
   }
@@ -42,7 +42,6 @@ class SimpleModal extends React.Component {
 
     return (
       <div>
-        <Typography gutterBottom>Click to get the full Modal experience!</Typography>
         <Button onClick={this.handleOpen}>Read More</Button>
         <Modal
           aria-labelledby="simple-modal-title"
@@ -68,7 +67,4 @@ SimpleModal.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-// We need an intermediary variable for handling the recursive nesting.
-const SimpleModalWrapped = withStyles(styles)(SimpleModal);
-
-export default SimpleModalWrapped;
+export default withStyles(styles)(SimpleModal);
