@@ -1,19 +1,24 @@
 
-#Red{
+#Red:hover{
   fill: #e7684b;
 }
 
-#Yellow{
+#Yellow:hover{
   fill:#f8d03c;
 }
 
-#Blue{
+#Blue:hover{
   fill:#2fa9dd;;
 }
 
-#Green{
+#Green:hover{
   fill:#00a651;;
 }
-#Purple{
+#Purple:hover{
   fill:#662d91;;
+}
+
+#svgDiv{
+  
+  align-content: center
 }
