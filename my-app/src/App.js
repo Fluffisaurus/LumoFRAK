@@ -38,16 +38,16 @@ const PTSD = () => (
   <div className="row">
     <div className="col-2">
       <div id="tab1">
-        <h1>PTSD</h1>
+      <Link to="/PTSD"> <h1>PTSD</h1> </Link>
       </div>
       <div id="tab2">
-        <h1>Depression</h1>
+      <Link to="/Depression"><h1>Depression</h1></Link>
       </div>
       <div id="tab3">
-        <h1>Substance Abuse</h1>
+      <Link to="/Substance"><h1>Substance Abuse</h1></Link>
       </div>
       <div id="tab4">
-        <h1>Suicide</h1>
+      <Link to="/Suicide"><h1>Suicide</h1></Link>
       </div>
     </div >
     <div className="col-10">
@@ -66,6 +66,7 @@ const PTSD = () => (
         </div>
       </div>
       <div id="content">
+      <News />
 
       </div>
     </div>
@@ -74,20 +75,121 @@ const PTSD = () => (
 
 const Depression = () => (
   <div>
-    {/* <CenteredGrid item='Depression' /> */}
-    <News />
+    <div className="row">
+      <div className="col-2">
+        <div id="tab1">
+        <Link to="/PTSD"> <h1>PTSD</h1> </Link>
+        </div>
+        <div id="tab2">
+        <Link to="/Depression"><h1>Depression</h1></Link>
+        </div>
+        <div id="tab3">
+        <Link to="/Substance"><h1>Substance Abuse</h1></Link>
+        </div>
+        <div id="tab4">
+        <Link to="/Suicide"><h1>Suicide</h1></Link>
+        </div>
+      </div >
+      <div className="col-10">
+        <div className="row">
+          <div id="top1">
+            <h1>News</h1>
+          </div>
+          <div id="top2">
+            <h1>General</h1>
+          </div>
+          <div id="top3">
+            <h1>Locations</h1>
+          </div>
+          <div id="top4">
+            <h1>Services</h1>
+          </div>
+        </div>
+        <div id="content">
+          <News />
+        </div>
+      </div>
+    </div>
   </div>
 )
 
 const Substance = () => (
   <div>
-    <h2>Substance Abuse</h2>
+    <div className="row">
+      <div className="col-2">
+        <div id="tab1">
+        <Link to="/PTSD"> <h1>PTSD</h1> </Link>
+        </div>
+        <div id="tab2">
+        <Link to="/Depression"><h1>Depression</h1></Link>
+        </div>
+        <div id="tab3">
+        <Link to="/Substance"><h1>Substance Abuse</h1></Link>
+        </div>
+        <div id="tab4">
+        <Link to="/Suicide"><h1>Suicide</h1></Link>
+        </div>
+      </div >
+      <div className="col-10">
+        <div className="row">
+          <div id="top1">
+            <h1>News</h1>
+          </div>
+          <div id="top2">
+            <h1>General</h1>
+          </div>
+          <div id="top3">
+            <h1>Locations</h1>
+          </div>
+          <div id="top4">
+            <h1>Services</h1>
+          </div>
+        </div>
+        <div id="content">
+          <News />
+        </div>
+      </div>
+    </div>
   </div>
 )
 
 const Suicide = () => (
   <div>
-    <h2>Suicide</h2>
+    <div className="row">
+      <div className="col-2">
+        <div id="tab1">
+        <Link to="/PTSD"> <h1>PTSD</h1> </Link>
+        </div>
+        <div id="tab2">
+        <Link to="/Depression"><h1>Depression</h1></Link>
+        </div>
+        <div id="tab3">
+        <Link to="/Substance"><h1>Substance Abuse</h1></Link>
+        </div>
+        <div id="tab4">
+        <Link to="/Suicide"><h1>Suicide</h1></Link>
+        </div>
+      </div >
+      <div className="col-10">
+        <div className="row">
+          <div id="top1">
+            <h1>News</h1>
+          </div>
+          <div id="top2">
+            <h1>General</h1>
+          </div>
+          <div id="top3">
+            <h1>Locations</h1>
+          </div>
+          <div id="top4">
+            <h1>Services</h1>
+          </div>
+        </div>
+        <div id="content">
+          <News />
+        </div>
+      </div>
+    </div>
   </div>
 )
 
