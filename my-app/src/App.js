@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import './App.css';
+import CustomizedTabs from './components/tabs.js';
 
 var what = "hello!"
 
@@ -64,15 +65,17 @@ const Credits = () => (
 )
 
 const App = () => (
-  <Router>
-    <div>
-      <Route exact path="/" component={Home} />
-      <Route path="/PTSD" component={PTSD} />
-      <Route path="/Depression" component={Depression} />
-      <Route path="/Substance" component={Substance} />
-      <Route path="/Suicide" component={Suicide} />
-      <Route path="/Credits" component={Credits} />
-    </div>
-  </Router>
+
+  <CustomizedTabs />
+  // <Router>
+  //   <div>
+  //     <Route exact path="/" component={Home} />
+  //     <Route path="/PTSD" component={PTSD} />
+  //     <Route path="/Depression" component={Depression} />
+  //     <Route path="/Substance" component={Substance} />
+  //     <Route path="/Suicide" component={Suicide} />
+  //     <Route path="/Credits" component={Credits} />
+  //   </div>
+  // </Router>
 )
 export default App;
