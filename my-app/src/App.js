@@ -1,4 +1,5 @@
 import React from 'react'
+import { InstantSearch, Configure, Hits, SearchBox, Highlight, RefinementList, Pagination, CurrentRefinements, ClearRefinements } from 'react-instantsearch-dom';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import './App.css';
 
@@ -30,7 +31,6 @@ class Home extends React.Component {
       </div>
     )
   }
-
 }
 
 const PTSD = () => (
@@ -66,13 +66,48 @@ const Credits = () => (
 const App = () => (
   <Router>
     <div>
-      <Route exact path="/" component={Home} />
-      <Route path="/PTSD" component={PTSD} />
-      <Route path="/Depression" component={Depression} />
-      <Route path="/Substance" component={Substance} />
-      <Route path="/Suicide" component={Suicide} />
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/PTSD">PTSD</Link></li>
+        <li><Link to="/Depression">Depression</Link></li>
+        <li><Link to="/Substance">Substance Abuse</Link></li>
+        <li><Link to="/Suicide">Suicide</Link></li>
+      </ul>
+
+      <hr/>
+
+      <InstantSearch
+        appId="QQ4OC1OUOJ"
+        apiKey="189583dc48a145bd10e8eb851f568d4d"
+        indexName="tedtalksvideos"
+        urlSync= "true"
+      >
+        {/* Search widgets will go there */}
+        <SearchBox />
+        <Configure hitsPerPage={10} />
+        <Hits hitComponent={Product} />
+        <Pagination />
+      </InstantSearch>
+
+      <Route exact path="/" component={Home}/>
+      <Route path="/PTSD" component={PTSD}/>
+      <Route path="/Depression" component={Depression}/>
+      <Route path="/Substance" component={Substance}/>
+      <Route path="/Suicide" component={Suicide}/>
       <Route path="/Credits" component={Credits} />
+
     </div>
   </Router>
 )
+
+function Product({ hit }) {
+  return (
+    <div style={{ marginTop: '10px' }}>
+      <a className="hit-name" href={hit.url} target="_blank">
+        <Highlight attribute="name" hit={hit} />
+      </a>
+    </div>
+  );
+}
+
 export default App;
