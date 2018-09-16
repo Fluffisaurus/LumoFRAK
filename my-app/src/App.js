@@ -33,12 +33,6 @@ class LandingPage extends React.Component {
   }
 }
 
-<<<<<<< HEAD
-let styles = {
-  color:'red',
-  backgroundColor: 'yellow',
-};
-=======
 let track = 1;
 
 class PTSD extends React.Component {
@@ -83,25 +77,12 @@ class PTSD extends React.Component {
     )
   }
 }
->>>>>>> 31e249fb6115daf108d2ba0167d71bd33435773d
 
 const PTSD = () => (
   <div class="container-fluid">
     <div class="row pl-3">
       <div class="col-sm-3 pt-5">
         <div id="tab1">
-<<<<<<< HEAD
-        <Link to="/PTSD"> <h1 style={styles} >PTSD</h1> </Link>
-        </div>
-        <div id="tab2">
-        <Link to="/Depression"><h1>Depression</h1></Link>
-        </div>
-        <div id="tab3">
-        <Link to="/Substance"><h1>Substance Abuse</h1></Link>
-        </div>
-        <div id="tab4">
-        <Link to="/Suicide"><h1>Suicide</h1></Link>
-=======
           <Link to="/PTSD"> <h2>PTSD</h2> </Link>
         </div>
         <div id="tab2">
@@ -112,7 +93,6 @@ const PTSD = () => (
         </div>
         <div id="tab4">
           <Link to="/Suicide"><h2>Suicide</h2></Link>
->>>>>>> 31e249fb6115daf108d2ba0167d71bd33435773d
         </div>
       </div >
       <div className="col-sm-9">
@@ -146,11 +126,7 @@ const Depression = () => (
           <Link to="/PTSD"> <h1>PTSD</h1> </Link>
         </div>
         <div id="tab2">
-<<<<<<< HEAD
         <Link to="/Depression"><h1 style={styles}>Depression</h1></Link>
-=======
-          <Link to="/Depression"><h1>Depression</h1></Link>
->>>>>>> 31e249fb6115daf108d2ba0167d71bd33435773d
         </div>
         <div id="tab3">
           <Link to="/Substance"><h1>Substance Abuse</h1></Link>
@@ -193,11 +169,7 @@ const Substance = () => (
           <Link to="/Depression"><h1>Depression</h1></Link>
         </div>
         <div id="tab3">
-<<<<<<< HEAD
         <Link to="/Substance"><h1 style={styles}>Substance Abuse</h1></Link>
-=======
-          <Link to="/Substance"><h1>Substance Abuse</h1></Link>
->>>>>>> 31e249fb6115daf108d2ba0167d71bd33435773d
         </div>
         <div id="tab4">
           <Link to="/Suicide"><h1>Suicide</h1></Link>
@@ -240,11 +212,7 @@ const Suicide = () => (
           <Link to="/Substance"><h1>Substance Abuse</h1></Link>
         </div>
         <div id="tab4">
-<<<<<<< HEAD
         <Link to="/Suicide"><h1 style={styles}>Suicide</h1></Link>
-=======
-          <Link to="/Suicide"><h1>Suicide</h1></Link>
->>>>>>> 31e249fb6115daf108d2ba0167d71bd33435773d
         </div>
       </div >
       <div className="col-sm-9">
