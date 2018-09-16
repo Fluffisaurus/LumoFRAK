@@ -4,30 +4,6 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { createStore } from 'redux';
 import './App.css';
 
-var tab = 1;
-const tabs = ['PTSD', 'Depression', 'Substance', 'Suicide'];
-const currentStateArray = [];
-
-const changeTab = (text) => {
-  return {type: 'CHANGE_TAB', text}
-}
-
-function changeTabStuff(state, action){
-  return [...state, action];
-}
-
-const currentTabReducer = (state = currentStateArray, action) =>{
-  switch(action.type){
-    case 'CHANGE_TAB':
-      console.log("i am here");
-      return changeTabStuff(state, action.text);
-    default:
-      return state;
-  }
-}
-
-const store = createStore(currentTabReducer);
-
 class LandingPage extends React.Component {
   constructor() {
     super();
@@ -56,68 +32,6 @@ class LandingPage extends React.Component {
   }
 }
 
-let tabStuff;
-
-class MainContent extends React.Component{
-  constructor(){
-    super();
-  }
-
-  handleClick(Item){
-    console.log(Item);
-    console.log(store.getState());
-    store.dispatch(changeTab(Item));
-    switch(store.getState()){
-      case 'PTSD':
-        tab = 1;
-        console.log(tab);
-        break;
-      case 'Depression':
-        tab = 2;
-        console.log(tab);
-        break;
-      case 'Substance':
-        tab = 3;
-        console.log(tab);
-        break;
-      case 'Suicide':
-        tab = 4;
-        console.log(tab);
-        break;
-      default: 
-        tab = 1;
-        break;
-    }
-  }
-
-  render(){
-    tabStuff = tabs.map((Item) => {
-      var current = store.getState();
-      if(Item === current){
-        return(
-          <button key={Item.toString()} id="buttonColoured" type="button"
-          onClick={() => this.handleClick(Item)}>
-            {Item}
-          </button>
-        )
-      }
-      else{
-        return(
-          <button key={Item.toString()} id="buttonNoColour" type="button"
-          onClick={() => this.handleClick(Item)}>
-            {Item}
-          </button>
-        )
-      }
-    });
-    return(
-      <div className="tabColumns">
-        {tabStuff}
-      </div>
-    )
-  }
-}
-store.subscribe(MainContent);
 
 const PTSD = () => (
   <div>
@@ -181,7 +95,7 @@ const App = () => (
         <Pagination />
       </InstantSearch>
 
-      <Route exact path="/" component={MainContent}/>
+      <Route exact path="/" component={LandingPage}/>
       <Route path="/PTSD" component={PTSD}/>
       <Route path="/Depression" component={Depression}/>
       <Route path="/Substance" component={Substance}/>
