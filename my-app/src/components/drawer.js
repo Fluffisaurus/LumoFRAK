@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
@@ -40,8 +39,8 @@ const styles = theme => ({
 class PermanentDrawer extends React.Component {
 
   render() {
+    console.log("drawer.js = ", this.props.item)
     const { classes } = this.props;
-
     const drawer = (
       <Drawer
         variant="permanent"
@@ -51,8 +50,12 @@ class PermanentDrawer extends React.Component {
       >
         <div className={classes.toolbar} />
         <List>
-          <ListItem button='true'>mailFolderListItems</ListItem>
-          <ListItem button='true'>otherMailFolderListItems</ListItem>
+          <ListItem button={true}>PTSD</ListItem>
+          <ListItem button={true}>Substance Abuse</ListItem>
+          <ListItem button={true}>Depression</ListItem>
+          <ListItem button={true}>Suicide</ListItem>
+          <ListItem button={true}>Credits</ListItem>
+
         </List>
       </Drawer>
     );
@@ -76,9 +79,5 @@ class PermanentDrawer extends React.Component {
     );
   }
 }
-
-PermanentDrawer.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
 
 export default withStyles(styles)(PermanentDrawer);
