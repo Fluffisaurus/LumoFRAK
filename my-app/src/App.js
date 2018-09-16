@@ -51,7 +51,7 @@ const PTSD = () => (
       </div>
     </div >
     <div className="col-10">
-      <div>
+      <div className="row">
         <div id="top1">
           <h1>News</h1>
         </div>
