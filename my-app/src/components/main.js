@@ -1,8 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-
 import CustomizedTabs from './tabs.js'; 
 import PaperSheet from './papers.js';
 import PermanentDrawer from './drawer.js';
@@ -19,27 +17,26 @@ const styles = theme => ({
 });
 
 function CenteredGrid(props) {
-  const { classes } = props;
+  // console.log(props)
+
+  console.log(props.item)
 
   return (
-    <div className={classes.root}>
+    <div>
       <Grid container spacing={0}>
         <Grid item xs={2}>
             <div>
-                <PermanentDrawer />
+                <PermanentDrawer item = {props.item}/>
             </div>
         </Grid>
         <Grid item xs={10}>
-            <CustomizedTabs />
-            <PaperSheet />
+            <CustomizedTabs item = {props.item}/>
+            <PaperSheet item = {props.item}/>
         </Grid>
       </Grid>
     </div>
   );
 }
 
-CenteredGrid.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
 
 export default withStyles(styles)(CenteredGrid);

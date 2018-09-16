@@ -1,7 +1,6 @@
 import React from 'react'
 import { InstantSearch, Configure, Hits, SearchBox, Highlight, Pagination } from 'react-instantsearch-dom';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import { createStore } from 'redux';
 import './App.css';
 import CenteredGrid from './components/main.js';
 
@@ -35,13 +34,12 @@ class LandingPage extends React.Component {
 
 
 const PTSD = () => (
-  <CenteredGrid />
+  <CenteredGrid item='PTSD'/>
 )
 
 const Depression = () => (
-  <div>
-    <h2>Depression</h2>
-  </div>
+  <CenteredGrid item='Depression'/>
+
 )
 
 const Substance = () => (
