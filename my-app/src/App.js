@@ -1,8 +1,8 @@
 import React from 'react'
-import { InstantSearch, Configure, Hits, SearchBox, Highlight, Pagination } from 'react-instantsearch-dom';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { createStore } from 'redux';
 import './App.css';
+import News from './algolia.js';
 import CenteredGrid from './components/main.js';
 
 class LandingPage extends React.Component {
@@ -41,7 +41,9 @@ const PTSD = () => (
 const Depression = () => (
   <div>
     <h2>Depression</h2>
+    <News />
   </div>
+  
 )
 
 const Substance = () => (
@@ -63,43 +65,16 @@ const Credits = () => (
 )
 
 const App = () => (
-  
-
-   <Router>
+  <Router>
     <div>
-       <InstantSearch
-        appId="QQ4OC1OUOJ"
-        apiKey="189583dc48a145bd10e8eb851f568d4d"
-        indexName="tedtalksvideos"
-        urlSync= "true"
-      >
-        {/* Search widgets will go there */}
-        <SearchBox />
-        <Configure hitsPerPage={10} />
-        <Hits hitComponent={Product} />
-        <Pagination />
-      </InstantSearch>
-
       <Route exact path="/" component={LandingPage}/>
       <Route path="/PTSD" component={PTSD}/>
       <Route path="/Depression" component={Depression}/>
       <Route path="/Substance" component={Substance}/>
       <Route path="/Suicide" component={Suicide}/>
       <Route path="/Credits" component={Credits} />
-
     </div>
   </Router>
-
 )
-
-function Product({ hit }) {
-  return (
-    <div style={{ marginTop: '10px' }}>
-      <a className="hit-name" href={hit.url} target="_blank">
-        <Highlight attribute="name" hit={hit} />
-      </a>
-    </div>
-  );
-}
 
 export default App;
