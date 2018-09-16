@@ -1,5 +1,10 @@
 import React from 'react'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import AppBar from '@material-ui/core/AppBar'
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import Toolbar from '@material-ui/core/Toolbar';
 
 const Home = () => (
   <div>
@@ -32,25 +37,47 @@ const Suicide = () => (
 )
 
 const App = () => (
-  <Router>
-    <div>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/PTSD">PTSD</Link></li>
-        <li><Link to="/Depression">Depression</Link></li>
-        <li><Link to="/Substance">Substance Abuse</Link></li>
-        <li><Link to="/Suicide">Suicide</Link></li>
-      </ul>
+  <AppBar position="static">
+      <Toolbar>
+        <Router>
+          <div>
+          <List component="nav">
+          <ListItem button>
+            <Link to="/">
+                <ListItemText primary="Home" />
+            </Link>
+          </ListItem>
+          <ListItem button>
+            <Link to="/PTSD">
+                <ListItemText primary="PTSD" />
+            </Link>
+          </ListItem>
+          <ListItem button>
+            <Link to="/Depression">
+                <ListItemText primary="Depression" />
+            </Link>
+          </ListItem>
+          <ListItem button>
+            <Link to="/substance">
+                <ListItemText primary="Substance Abuse" />
+            </Link>
+          </ListItem>
+          <ListItem button>
+            <Link to="/Suicide">
+                <ListItemText primary="Suicide" />
+            </Link>
+          </ListItem>
+          </List>
+            <hr/>
+            <Route exact path="/" component={Home}/>
+            <Route path="/PTSD" component={PTSD}/>
+            <Route path="/Depression" component={Depression}/>
+            <Route path="/substance" component={Substance}/>
+            <Route path="/Suicide" component={Suicide}/>
 
-      <hr/>
-
-      <Route exact path="/" component={Home}/>
-      <Route path="/PTSD" component={PTSD}/>
-      <Route path="/Depression" component={Depression}/>
-      <Route path="/Substance" component={Substance}/>
-      <Route path="/Suicide" component={Suicide}/>
-
-    </div>
-  </Router>
+          </div>
+        </Router>
+      </Toolbar>
+  </AppBar>
 )
 export default App;
