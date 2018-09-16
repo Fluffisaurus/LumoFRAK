@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 
 import CustomizedTabs from './tabs.js'; 
 import PaperSheet from './papers.js';
+import PermanentDrawer from './drawer.js';
 
 const styles = theme => ({
   root: {
@@ -24,7 +25,9 @@ function CenteredGrid(props) {
     <div className={classes.root}>
       <Grid container spacing={0}>
         <Grid item xs={2}>
-            2
+            <div>
+                <PermanentDrawer />
+            </div>
         </Grid>
         <Grid item xs={10}>
             <CustomizedTabs />
